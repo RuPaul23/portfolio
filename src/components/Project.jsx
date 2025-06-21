@@ -11,12 +11,13 @@ const Project = ({
   setPreview,
 }) => {
   const [isHidden, setIsHidden] = useState(false);
+  const isMobile = typeof window !== "undefined" && window.innerWidth <= 853;
   return (
     <>
       <div
         className="flex-wrap items-center justify-between py-10 space-y-14 sm:flex sm:space-y-0"
-        onMouseEnter={() => setPreview(image)}
-        onMouseLeave={() => setPreview(null)}
+        onMouseEnter={!isMobile ? () => setPreview(image) : undefined}
+        onMouseLeave={!isMobile ? () => setPreview(null) : undefined}
       >
         <div>
           <p className="text-2xl">{title}</p>
@@ -31,7 +32,10 @@ const Project = ({
           className="flex items-center gap-1 cursor-pointer hover-animation"
         >
           Read More
-          <img src="assets/arrow-right.svg" className="w-5" />
+          <img
+            src={import.meta.env.BASE_URL + "assets/arrow-right.svg"}
+            className="w-5"
+          />
         </button>
       </div>
       <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full" />

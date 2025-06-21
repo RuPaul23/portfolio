@@ -57,7 +57,7 @@ export const Timeline = ({ data }) => {
               ))}
               {item.image && hoveredIndex === index && (
                 <img
-                  src={item.image}
+                  src={import.meta.env.BASE_URL + item.image}
                   alt={item.title}
                   className={`absolute right-4 top-4 w-40 h-40 object-contain rounded-xl shadow-lg border-2 border-neutral-700 z-50 transition-opacity duration-300 ${(item.image.endsWith('.svg') || item.image.endsWith('JU.png')) && item.image.includes('/assets/work/') ? 'bg-white' : 'bg-neutral-900'}`}
                   style={{ opacity: 1 }}

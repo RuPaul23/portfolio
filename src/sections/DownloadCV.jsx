@@ -8,7 +8,7 @@ const DownloadCV = () => (
         </p>
       </div>
       <a
-        href="assets/cv/Rohit_Paul_(CV).pdf"
+        href={import.meta.env.BASE_URL + "assets/cv/Rohit_Paul_(CV).pdf"}
         download
         className="px-8 py-3 text-lg text-white bg-indigo rounded-lg shadow-lg hover:bg-royal transition-colors duration-200 font-semibold mt-2 w-full text-center"
       >

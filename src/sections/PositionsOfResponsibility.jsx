@@ -7,7 +7,7 @@ const positions = [
       "Organized workshops and hackathons, increasing Flutter adoption by 200% among peers.",
       "Mentored junior developers and fostered a collaborative learning environment."
     ],
-    icon: "/assets/logos/google.png"
+    icon: import.meta.env.BASE_URL + "assets/logos/google.png"
   },
   {
     title: "MLSA Lead",
@@ -17,7 +17,7 @@ const positions = [
       "Collaborated with Microsoft professionals to deliver hands-on learning experiences.",
       "Promoted diversity and inclusion in tech through outreach and mentorship."
     ],
-    icon: "/assets/logos/microsoft.svg"
+    icon: import.meta.env.BASE_URL + "assets/logos/microsoft.svg"
   }
 ];
 

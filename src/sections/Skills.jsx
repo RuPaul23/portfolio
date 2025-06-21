@@ -3,7 +3,7 @@ import Marquee from "../components/Marquee";
 
 const SkillCard = ({ img, name }) => (
   <figure className="relative h-full w-48 flex flex-col items-center justify-center rounded-xl border p-4 border-gray-50/[.1] bg-gradient-to-r bg-indigo to-storm hover:bg-royal hover-animation mx-2">
-    <img src={img} alt={name} className="w-16 h-16 object-contain mb-2" />
+    <img src={import.meta.env.BASE_URL + img} alt={name} className="w-16 h-16 object-contain mb-2" />
     <figcaption className="text-base font-medium text-white text-center">{name}</figcaption>
   </figure>
 );

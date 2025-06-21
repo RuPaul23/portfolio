@@ -30,26 +30,27 @@ const Contact = () => {
     setIsLoading(true);
 
     try {
-      console.log("From submitted:", formData);
+      // Send email directly to your email address
       await emailjs.send(
         "service_79b0nyj",
         "template_17us8im",
         {
           from_name: formData.name,
-          to_name: "Ali",
+          to_name: "Rohit Paul",
           from_email: formData.email,
-          to_email: "AliSanatiDev@gmail.com",
+          to_email: "paulrohit2021@gmail.com",
           message: formData.message,
+          subject: "Talking about a project",
         },
         "pn-Bw_mS1_QQdofuV"
       );
       setIsLoading(false);
       setFormData({ name: "", email: "", message: "" });
-      showAlertMessage("success", "You message has been sent!");
+      showAlertMessage("success", "Your message has been sent!");
     } catch (error) {
       setIsLoading(false);
       console.log(error);
-      showAlertMessage("danger", "Somthing went wrong!");
+      showAlertMessage("danger", "Something went wrong!");
     }
   };
   return (

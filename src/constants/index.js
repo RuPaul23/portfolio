@@ -129,17 +129,17 @@ export const mySocials = [
   {
     name: "Email",
     href: "mailto:paulrohit2021@gmail.com",
-    icon: "/assets/socials/Email.png",
+    icon: import.meta.env.BASE_URL + "assets/socials/Email.png",
   },
   {
     name: "Linkedin",
     href: "https://www.linkedin.com/in/rohitpaul23/",
-    icon: "/assets/socials/linkedIn.svg",
+    icon: import.meta.env.BASE_URL + "assets/socials/linkedIn.svg",
   },
   {
     name: "Github",
     href: "https://github.com/RuPaul23",
-    icon: "/assets/socials/github.png",
+    icon: import.meta.env.BASE_URL + "assets/socials/github.png",
   },
 ];
 
